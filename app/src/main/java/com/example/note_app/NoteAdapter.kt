@@ -14,7 +14,9 @@ class NoteAdapter:ListAdapter<Note,NoteViewHilder>(comperator) {
     }
 
     override fun onBindViewHolder(holder: NoteViewHilder, position: Int) {
+
         getItem(position).let {
+
             holder.binding.apply {
                 noteTittle.text=it.title
                 DateTv.text=it.date
